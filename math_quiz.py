@@ -1,6 +1,4 @@
 import random
-import numpy as np
-
 
 def function_A(min, max):
     """
@@ -41,7 +39,10 @@ def math_quiz():
         #create two random numbers and an operator
         number1 = function_A(1, 10)
         number2 = function_A(1, 5)
-        operator = function_B()
+        try:
+            operator = function_B()
+        except:
+            print("An Exception occured!")
 
         #create the function and the calculated operation
         PROBLEM, ANSWER = function_C(number1, number2, operator)
